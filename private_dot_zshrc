@@ -18,9 +18,10 @@ fi
 # Remove older command from the history if a duplicate is to be added.
 setopt HIST_IGNORE_ALL_DUPS
 
-#
-# Input/output
-#
+# zsh-history-substring-search
+# https://github.com/zsh-users/zsh-history-substring-search
+bindkey '^[[A' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
 
 # Set editor default keymap to emacs (`-e`) or vi (`-v`)
 bindkey -e
@@ -32,6 +33,7 @@ WORDCHARS=${WORDCHARS//[\/]}
 autoload -U +X bashcompinit && bashcompinit
 
 export PATH="/usr/local/opt/openjdk/bin:$PATH"
+
 
 
 # Fig post block. Keep at the bottom of this file.
