@@ -1,0 +1,16 @@
+{{- if eq .chezmoi.os "darwin" -}}
+#!/bin/bash
+
+brew bundle --no-lock --file=/dev/stdin <<EOF
+
+brew "asdf"
+
+cask "iterm2"
+cask "brave-browser"
+cask "fig"
+cask "jetbrains-toolbox"
+cask "docker"
+cask "obsidian"
+
+EOF
+{{ end -}}
