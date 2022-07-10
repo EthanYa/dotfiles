@@ -26,14 +26,16 @@ bindkey '^[[B' history-substring-search-down
 # Set editor default keymap to emacs (`-e`) or vi (`-v`)
 bindkey -e
 
-
 # Remove path separator from WORDCHARS.
 WORDCHARS=${WORDCHARS//[\/]}
 
-autoload -U +X bashcompinit && bashcompinit
+autoload -Uz compinit && compinit
 
 export PATH="/usr/local/opt/openjdk/bin:$PATH"
 
+# asdf 
+# https://asdf-vm.com/guide/getting-started.html#_3-install-asdf
+. /usr/local/opt/asdf/libexec/asdf.sh
 
 
 # Fig post block. Keep at the bottom of this file.
