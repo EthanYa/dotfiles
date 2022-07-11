@@ -1,0 +1,41 @@
+{{ if (eq .chezmoi.os "darwin") -}}
+#!/bin/bash
+osascript -e 'tell application "System Preferences" to quit'
+
+# Finder > View > Show Path Bar
+defaults write com.apple.finder ShowPathbar -bool true
+
+# System Preferences > Accessibility > Pointer Control > Mouse & Trackpad > Trackpad Options > Enable Dragging > Three Finger Drag (NOTE: The GUI doesn't update)
+defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadThreeFingerDrag -bool true
+defaults write com.apple.AppleMultitouchTrackpad TrackpadThreeFingerDrag -bool true
+
+# System Preferences > Keyboard > Key Repeat > Fast
+defaults write -g KeyRepeat 2
+
+# System Preferences > Keyboard > Delay Until Repeat > Fast
+defaults write -g InitialKeyRepeat 15
+
+# System Preferences > Keyboard > Input Sources > Use the Caps Lock key to switch to and from ABC > Enable
+defaults write -g AppleKeyboardUIMode -int 3
+
+# System Preferences > Trackpad > Point & Click > Tracking Speed > Fast
+defaults write -g com.apple.trackpad.scaling 3
+
+# System Preferences > Trackpad > Tap to Click > Enabled
+defaults write com.apple.AppleMultitouchTrackpad Clicking -bool true
+defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
+defaults -currentHost write Apple Global Domain com.apple.mouse.tapBehavior 1
+
+
+
+# Third-Party Software
+
+# iTerm2 Settings
+# Specify the preferences directory
+defaults write com.googlecode.iterm2 LoadPrefsFromCustomFolder -bool true
+# Tell iTerm2 to use the custom preferences in the directory
+defaults write com.googlecode.iterm2 PrefsCustomFolder -string "$HOME/.dotfiles/iterm2"
+
+
+killall finder
+{{ end -}}
