@@ -35,4 +35,9 @@ defaults write com.googlecode.iterm2 LoadPrefsFromCustomFolder -bool true
 # Tell iTerm2 to use the custom preferences in the directory
 defaults write com.googlecode.iterm2 PrefsCustomFolder -string "{{ .chezmoi.sourceDir }}/private_dot_config/iterm2"
 
+# Install Fonts
+curl -sL https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Regular.ttf > "$HOME/Library/Fonts/MesloLGS NF Regular.ttf" &
+curl -sL https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold.ttf > "$HOME/Library/Fonts/MesloLGS NF Bold.ttf" &&
+curl -sL https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Italic.ttf > "$HOME/Library/Fonts/MesloLGS NF Italic.ttf" &&
+curl -sL https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold%20Italic.ttf > "$HOME/Library/Fonts/MesloLGS NF Bold Italic.ttf"
 {{ end -}}
