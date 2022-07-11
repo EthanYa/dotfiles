@@ -3,15 +3,55 @@
 
 brew bundle --no-lock --file=/dev/stdin <<EOF
 
-brew "chezmoi"
+tap "homebrew/bundle"
+tap "homebrew/cask"
+tap "homebrew/core"
+tap "ngrok/ngrok"
+tap "stripe/stripe-cli"
 brew "asdf"
-
-cask "iterm2"
+brew "awscli"
+brew "gnupg"
+brew "chezmoi"
+brew "commitizen"
+brew "dive"
+brew "gh"
+brew "helm"
+brew "helmfile"
+brew "k6"
+brew "k9s"
+brew "linode-cli"
+brew "mas"
+brew "pinentry-mac"
+brew "pulumi"
+brew "sheldon"
+brew "tree"
+brew "watch"
+brew "stripe/stripe-cli/stripe"
+cask "another-redis-desktop-manager"
+cask "authy"
 cask "brave-browser"
-cask "fig"
-cask "jetbrains-toolbox"
+cask "charles"
+cask "cyberduck"
+cask "discord"
 cask "docker"
+cask "fig"
+cask "google-chrome"
+cask "iterm2"
+cask "jetbrains-toolbox"
+cask "ngrok"
 cask "obsidian"
+cask "openvpn-connect"
+cask "postman"
+cask "spotify"
+cask "visual-studio-code"
+cask "zoom"
+cask "the-unarchiver"
+cask "telegram"
+
+mas "LINE", id: 539883307
+mas "Magnet", id: 441258766
+mas "Xcode", id: 497799835
+
 
 EOF
 {{ end -}}
