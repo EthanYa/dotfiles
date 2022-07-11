@@ -43,7 +43,7 @@ export PATH="/usr/local/opt/openjdk/bin:$PATH"
 
 # asdf 
 # https://asdf-vm.com/guide/getting-started.html#_3-install-asdf
-. /usr/local/opt/asdf/libexec/asdf.sh
+. $(brew --prefix asdf)/libexec/asdf.sh
 
 # Fig post block. Keep at the bottom of this file.
 [[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && . "$HOME/.fig/shell/zshrc.post.zsh"
