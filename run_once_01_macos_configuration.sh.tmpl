@@ -34,6 +34,6 @@ defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool
 # Specify the preferences directory
 defaults write com.googlecode.iterm2 LoadPrefsFromCustomFolder -bool true
 # Tell iTerm2 to use the custom preferences in the directory
-defaults write com.googlecode.iterm2 PrefsCustomFolder -string "{{ .chezmoi.sourceDir }}/private_dot_config/iterm2/com.googlecode.iterm2.plist"
+defaults write com.googlecode.iterm2 PrefsCustomFolder -string "{{ .chezmoi.sourceDir }}/private_dot_config/iterm2"
 
 {{ end -}}
