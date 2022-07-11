@@ -1,5 +1,8 @@
 {{ if (eq .chezmoi.os "darwin") -}}
 #!/bin/bash
+
+set -eufo pipefail
+
 osascript -e 'tell application "System Preferences" to quit'
 
 # Finder > View > Show Path Bar
@@ -24,9 +27,6 @@ defaults write -g com.apple.trackpad.scaling 3
 # System Preferences > Trackpad > Tap to Click > Enabled
 defaults write com.apple.AppleMultitouchTrackpad Clicking -bool true
 defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
-defaults -currentHost write Apple Global Domain com.apple.mouse.tapBehavior 1
-
-
 
 # Third-Party Software
 
@@ -34,8 +34,6 @@ defaults -currentHost write Apple Global Domain com.apple.mouse.tapBehavior 1
 # Specify the preferences directory
 defaults write com.googlecode.iterm2 LoadPrefsFromCustomFolder -bool true
 # Tell iTerm2 to use the custom preferences in the directory
-defaults write com.googlecode.iterm2 PrefsCustomFolder -string "$HOME/.dotfiles/iterm2"
+defaults write com.googlecode.iterm2 PrefsCustomFolder -string "{{ .chezmoi.sourceDir }}/private_dot_config/iterm2/com.googlecode.iterm2.plist"
 
-
-killall finder
 {{ end -}}
