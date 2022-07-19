@@ -1,9 +1,9 @@
 [user]
 	name = Ethan Yeh
 	email = ethan.yeh@tokenbricks.com
-	{{ if eq .chezmoi.username "ethanyeh" }}
+	{{ if eq .chezmoi.hostname "Ethans-MacBook-Pro" }}
 	signingkey = E559D80D446C04BF2702D6145DC92E888879168D
-	{{ else if eq .chezmoi.username "0xethan" }}
+	{{ else if eq .chezmoi.hostname "0xethans-MacBook-Pro" }}
 	signingkey = 2FBDBF49FDF1C759F29E79CC5270F1D51F9E94FF
 	{{ end }}
 

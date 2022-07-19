@@ -1,10 +1,13 @@
 # Fig pre block. Keep at the top of this file.
 [[ -f "$HOME/.fig/shell/zprofile.pre.zsh" ]] && . "$HOME/.fig/shell/zprofile.pre.zsh"
 
+{{ if and (eq .chezmoi.os "darwin") (eq .chezmoi.arch "arm64") }}
 # Homebrew for Mac(M1)
-if [[ $(uname -m) == 'arm64' ]]; then
- eval $(/opt/homebrew/bin/brew shellenv)
-fi
+eval $(/opt/homebrew/bin/brew shellenv)
+
+# Added by Toolbox App
+export PATH="$PATH:/Users/{{ .chezmoi.username }}/Library/Application Support/JetBrains/Toolbox/scripts"
+{{ end }}
 
 # Fig post block. Keep at the bottom of this file.
 [[ -f "$HOME/.fig/shell/zprofile.post.zsh" ]] && . "$HOME/.fig/shell/zprofile.post.zsh"\

@@ -1,9 +1,9 @@
 [user]
 	name = Ethan Yeh
 	email = ethanyeh0301@gmail.com
-	{{ if eq .chezmoi.username "ethanyeh" }}
+	{{ if eq .chezmoi.hostname "Ethans-MacBook-Pro" }}
 	signingkey = 120FB08D3D2C5817E39F0BE66D8461B170350FC3
-	{{ else if eq .chezmoi.username "0xethan" }}
+	{{ else if eq .chezmoi.hostname "0xethans-MacBook-Pro" }}
 	signingkey = B351E0DDAB079C501AC148635C60F05C4DD0E74B
 	{{ end }}
 [includeIf "gitdir:~/workspace/TokenBricks/"]
@@ -12,7 +12,7 @@
 [init]
 	defaultBranch = main
 [gpg]
-	{{ if eq .chezmoi.arch "arm64" }}
+	{{ if and (eq .chezmoi.os "darwin") (eq .chezmoi.arch "arm64") }}
 	program = /opt/homebrew/bin/gpg
 	{{ else }}
 	program = /usr/local/bin/gpg
