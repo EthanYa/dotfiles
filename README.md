@@ -29,6 +29,7 @@ My macOS dotfiles
 - [ ] ~/.kube
 - [ ] ~/.ssh
 - [ ] ~/.vim
+- [ ] gh setting
 - mac configuration
     - [ ] show bluetooth in menu bar
     - [ ] time format use 24-Hour time
