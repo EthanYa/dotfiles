@@ -1,0 +1,17 @@
+[user]
+	name = Ethan Yeh
+	email = ethanyeh0301@gmail.com
+	{{ if eq .chezmoi.username "ethanyeh" }}
+	signingkey = 120FB08D3D2C5817E39F0BE66D8461B170350FC3
+	{{ else if eq .chezmoi.username "0xethan" }}
+	signingkey =
+	{{ end }}
+[includeIf "gitdir:~/workspace/TokenBricks/"]
+	path = .gitconfig-TokenBricks
+
+[init]
+	defaultBranch = main
+[gpg]
+	program = /usr/local/bin/gpg
+[commit]
+	gpgsign = true
