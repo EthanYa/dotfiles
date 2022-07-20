@@ -31,7 +31,6 @@ My macOS dotfiles
 - [ ] ~/.vim
 - [ ] gh setting
 - mac configuration
-    - [ ] show bluetooth in menu bar
-    - [ ] time format use 24-Hour time
-    - [ ] keyboard > Key Repeat > Fast
-    - [ ] keyboard > Delay Until Repeat > Short
+    - [X] time format use 24-Hour time
+    - [X] keyboard > Key Repeat > Fast
+    - [X] keyboard > Delay Until Repeat > Short

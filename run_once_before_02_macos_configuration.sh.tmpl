@@ -13,10 +13,13 @@ defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadThreeF
 defaults write com.apple.AppleMultitouchTrackpad TrackpadThreeFingerDrag -bool true
 
 # System Preferences > Keyboard > Key Repeat > Fast
-defaults write -g KeyRepeat 1
+defaults write -g KeyRepeat -int 1 # normal minimum is 2
 
 # System Preferences > Keyboard > Delay Until Repeat > Fast
-defaults write -g InitialKeyRepeat 10
+defaults write -g InitialKeyRepeat -int 10 # normal minimum is 15
+
+# turn off press and hold
+defaults write -g ApplePressAndHoldEnabled -bool false
 
 # System Preferences > Keyboard > Input Sources > Use the Caps Lock key to switch to and from ABC > Enable
 
@@ -26,6 +29,9 @@ defaults write -g com.apple.trackpad.scaling 3
 # System Preferences > Trackpad > Tap to Click > Enabled
 defaults write com.apple.AppleMultitouchTrackpad Clicking -bool true
 defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
+
+# enable 24-Hour time
+defaults write com.apple.menuextra.clock DateFormat -string "EEE d MMM HH:mm"
 
 # Third-Party Software
 
