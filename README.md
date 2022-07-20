@@ -30,6 +30,9 @@ My macOS dotfiles
 - [ ] ~/.ssh
 - [ ] ~/.vim
 - [ ] gh setting
+- asdf
+  - [ ] add plugins (nodejs, terraform)
+  - [ ] set default global version
 - mac configuration
     - [X] time format use 24-Hour time
     - [X] keyboard > Key Repeat > Fast
