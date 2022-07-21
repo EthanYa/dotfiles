@@ -22,6 +22,10 @@ My macOS dotfiles
 - [Generating a new GPG](https://docs.github.com/en/authentication/managing-commit-signature-verification/generating-a-new-gpg-)
 - [Add GPG key via terraform](https://github.com/EthanYa/github-infrastructure/blob/528289a125dafa0f3988a66327f356d1a42d92f6/terraform.tfvars#L5)
 
+### Use Raycast as launcher
+- [Disable Spotlight](https://manual.raycast.com/hotkey)
+- import setting
+
 ### Sync Jetbrains IDEs setting
 
 ## TODO
