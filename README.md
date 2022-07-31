@@ -41,4 +41,4 @@ My macOS dotfiles
     - [X] time format use 24-Hour time
     - [X] keyboard > Key Repeat > Fast
     - [X] keyboard > Delay Until Repeat > Short
-    - [ ] Dock & Menu Bar > Automatically hide and show the Dock > enabled
+    - [X] Dock & Menu Bar > Automatically hide and show the Dock > enabled

@@ -8,6 +8,9 @@ osascript -e 'tell application "System Preferences" to quit'
 # Finder > View > Show Path Bar
 defaults write com.apple.finder ShowPathbar -bool true
 
+# Dock & Menu Bar > Automatically hide and show the Dock > enabled
+defaults write com.apple.dock autohide -bool true
+
 # System Preferences > Accessibility > Pointer Control > Mouse & Trackpad > Trackpad Options > Enable Dragging > Three Finger Drag (NOTE: The GUI doesn't update)
 defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadThreeFingerDrag -bool true
 defaults write com.apple.AppleMultitouchTrackpad TrackpadThreeFingerDrag -bool true
