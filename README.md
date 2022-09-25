@@ -8,6 +8,15 @@ My macOS dotfiles
 ```
 
 ## manually steps
+### Login / Unlock Bitwarden
+Login to Bitwarden
+```shell
+bw login $BITWARDEN_EMAIL
+```
+Unlock Bitwarden vault
+```shell
+bw unlock
+```
 ### Sync Brave Browser
 - [How do I set up Sync](https://support.brave.com/hc/en-us/articles/360021218111-How-do-I-set-up-Sync-)
 > Disable sync `Open Tabs` , `Passwords`, `Addresses and more`
@@ -35,7 +44,7 @@ My macOS dotfiles
 - [ ] ~/.vim
 - [ ] gh setting
 - asdf
-  - [ ] add plugins (nodejs, terraform)
+  - [ ] add plugins (nodejs, terraform, golang, rust)
   - [ ] set default global version
 - mac configuration
     - [X] time format use 24-Hour time
