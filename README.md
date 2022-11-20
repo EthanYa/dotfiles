@@ -36,6 +36,8 @@ bw unlock
 - import setting
 
 ### Sync Jetbrains IDEs setting
+- [WebStorm](https://www.jetbrains.com/help/webstorm/sharing-your-ide-settings.html#IDE_settings_sync)
+- [DataGriip](https://www.jetbrains.com/help/datagrip/sharing-your-ide-settings.html#IDE_settings_sync)
 
 ## TODO
 - [X] ~/.aws
