@@ -7,7 +7,7 @@ My macOS dotfiles
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/EthanYa/dotfiles/master/install.sh)"
 ```
 
-## manually steps
+## Manually steps
 ### Login / Unlock Bitwarden
 Login to Bitwarden
 ```shell
