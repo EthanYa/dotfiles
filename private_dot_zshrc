@@ -3,6 +3,9 @@
 # init sheldon
 eval "$(sheldon source)"
 
+# thefuck
+eval $(thefuck --alias)
+
 # alias
 alias ls='ls -G'
 
